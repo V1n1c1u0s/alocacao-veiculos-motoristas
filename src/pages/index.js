@@ -2,12 +2,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
+import { setCookie } from 'cookies-next'
+import { useRouter } from 'next/router'
 
 export default function Home() {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   })
+
+  const [error, setError] = useState('')
+
+  const router = useRouter()
 
   const handleFormEdit = (event, name) => {
     setFormData({
@@ -19,12 +25,19 @@ export default function Home() {
   const handleForm = async (event) => {
     try{
       event.preventDefault()
+      //console.log(formData)
       const response = await fetch(`/api/auth/user/login`, {
         method: 'POST',
         body: JSON.stringify(formData)
       })
+      const json = await response.json()
+
+      if(response.status == 400) throw new Error(json)
+
+      setCookie('authorization', json)
+      router.push('/dashboard')
     } catch(err) {
-      console.log(err)
+      setError(err.message)
     }
   }
 
