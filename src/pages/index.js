@@ -41,14 +41,15 @@ export default function Home() {
     }
   }
 
-  return (
-    <>
-      <Head>
-        <title>Login</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <div className={styles.containers}>
-        <div className={styles.container1}>
+return (
+  <>
+    <Head>
+      <title>Login</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
+    <div className={styles.containers}>
+      <div className={styles.container1}>
+        <div className={styles.containerForm}>
           <form className={styles.form} onSubmit={ handleForm } >
             <div className={styles.message}>
               <h1>Bem-vindo!</h1>
@@ -88,18 +89,19 @@ export default function Home() {
             </div>
           </form>
         </div>
-        <div className={styles.container2}>
-          <div className={styles.containerLogo}>
-            <Image
-              className={styles.imgLogo}
-              src="/UFRPE.png"
-              alt="UFRPE Logo"
-              fill
-              priority
-            />
-          </div>
+      </div>
+      <div className={styles.container2}>
+        <div className={styles.containerLogo}>
+          <Image
+            className={styles.imgLogo}
+            src="/UFRPE.png"
+            alt="UFRPE Logo"
+            fill
+            priority
+          />
         </div>
       </div>
-    </>
-  )
+    </div>
+  </>
+)
 }
