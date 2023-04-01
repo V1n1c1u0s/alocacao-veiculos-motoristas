@@ -1,0 +1,137 @@
+#nome{
+    width: 440px;
+    height: 35px;
+    left: -6432px;
+    border-radius: 10px;
+    background-color:#697698;
+    top: -187px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    outline: 0;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#email{
+    width: 440px;
+    height: 35px;
+    left: -6432px;
+    border-radius: 10px;
+    background-color: #697698;
+    top: -93px;
+display: block;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 25px;
+outline: 0;
+color: #FFFFFF;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#senha{
+    width: 440px;
+    height: 35px;
+    left: -6432px;
+    border-radius: 10px;
+    background-color: #697698;
+    top: 1px;
+  
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    outline: 0;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+#cpf{
+    width: 440px;
+    height: 35px;
+    left: -6432px;
+    border-radius: 10px;
+    background-color: #697698;
+    top: 96px;
+  
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    outline: 0;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contato{
+    width: 440px;
+    height: 35px;
+    left: -6432px;
+    border-radius: 10px;
+    background-color: #697698;
+    top: 191px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    outline: 0;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+#botao{
+    width: 165px;
+    height: 34px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #3D5B95;
+    border-radius: 10px;
+    color: #ACBFF0;
+    outline: 0;
+}
+#email::placeholder{
+    color: #ACBFF0;
+    display: block;
+}
+#contato::placeholder{
+    color: #ACBFF0;
+    display: block;
+}
+#cpf::placeholder{
+    color: #ACBFF0;
+    display: block;
+}
+#senha::placeholder{
+    color: #ACBFF0;
+    display: block;
+}
+#botao::placeholder{
+    color: #ACBFF0;
+    display: block;
+}
+#nome::placeholder{
+    color: #ACBFF0;
+    display: block;
+}
+#h1{
+color: #FFFFFF;
+width: 587px;
+height: 101px;
+align-items: center;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+}
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .success {
+    color: rgb(0, 168, 0);
+  }
+  
+  .error {
+    color: red;
+  }
