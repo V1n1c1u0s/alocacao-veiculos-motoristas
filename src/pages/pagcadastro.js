@@ -1,14 +1,15 @@
 import Cadastro from '../componentes/logo';
 import Imagem from '../componentes/cadastro';
-import '../styles/pagcadastro.module.css';
+import styles from '../styles/pagcadastro.module.css';
  export default function PagCadastro() {
   return (
-    <div className="App">
-      <div className='ColunaEsquerda'>
-      <Imagem/>
-      </div>
-      <div className='ColunaDireita'>
+    <div className={styles.App}>
+      <div className={styles.ColunaEsquerda}>
       <Cadastro/>
+      </div>
+      <div className={styles.ColunaDireita}>
+      
+      <Imagem/>
       </div>
     </div>
   );

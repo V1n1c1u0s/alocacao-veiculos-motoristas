@@ -1,4 +1,4 @@
-#nome{
+.nome{
     width: 440px;
     height: 35px;
     left: -6432px;
@@ -13,7 +13,7 @@
     color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
 }
-#email{
+.email{
     width: 440px;
     height: 35px;
     left: -6432px;
@@ -29,7 +29,7 @@ color: #FFFFFF;
 font-family: Arial, Helvetica, sans-serif;
 }
 
-#senha{
+.senha{
     width: 440px;
     height: 35px;
     left: -6432px;
@@ -45,7 +45,7 @@ font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
    }
-#cpf{
+.cpf{
     width: 440px;
     height: 35px;
     left: -6432px;
@@ -62,7 +62,7 @@ font-family: Arial, Helvetica, sans-serif;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#contato{
+.contato{
     width: 440px;
     height: 35px;
     left: -6432px;
@@ -77,7 +77,7 @@ font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
 } 
-#botao{
+.botao{
     width: 165px;
     height: 34px;
     display: block;
@@ -88,31 +88,31 @@ font-family: Arial, Helvetica, sans-serif;
     color: #ACBFF0;
     outline: 0;
 }
-#email::placeholder{
+.email::placeholder{
     color: #ACBFF0;
     display: block;
 }
-#contato::placeholder{
+.contato::placeholder{
     color: #ACBFF0;
     display: block;
 }
-#cpf::placeholder{
+.cpf::placeholder{
     color: #ACBFF0;
     display: block;
 }
-#senha::placeholder{
+.senha::placeholder{
     color: #ACBFF0;
     display: block;
 }
-#botao::placeholder{
+.botao::placeholder{
     color: #ACBFF0;
     display: block;
 }
-#nome::placeholder{
+.nome::placeholder{
     color: #ACBFF0;
     display: block;
 }
-#h1{
+.h1{
 color: #FFFFFF;
 width: 587px;
 height: 101px;

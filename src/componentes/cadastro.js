@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 //import axios from 'axios';
-import '../styles/cadastro.module.css';
+import styles from '../styles/cadastro.module.css';
 
 function Cadastro() {
   const [nome, setNome] = useState('');
@@ -27,13 +27,13 @@ function Cadastro() {
   };
   */
   return (
-    <form className="formulario">
-      <p id="h1">Realize o cadastro de um novo usuário.</p>
-      <div id="campos">
+    <form className={styles.formulario}>
+      <p className={styles.h1}>Realize o cadastro de um novo usuário.</p>
+      <div className={styles.campos}>
         <div>
           <p>
             <input
-              id="nome"
+              className={styles.nome}
               type="text"
               placeholder=" Nome:"
               value={nome}
@@ -45,7 +45,7 @@ function Cadastro() {
         <div>
           <p>
             <input
-              id="email"
+              className={styles.email}
               type="email"
               placeholder=" Email:"
               value={email}
@@ -57,7 +57,7 @@ function Cadastro() {
         <div>
           <p>
             <input
-              id="contato"
+             className={styles.contato}
               type="tel"
               placeholder=" Contato:"
               value={contato}
@@ -69,7 +69,7 @@ function Cadastro() {
         <div>
           <p>
             <input
-              id="cpf"
+              className={styles.cpf}
               type="text"
               placeholder=" CPF:"
               value={cpf}
@@ -81,7 +81,7 @@ function Cadastro() {
         <div>
           <p>
             <input
-              id="senha"
+              className={styles.senha}
               type="password"
               placeholder=" Senha:"
               value={senha}
@@ -91,7 +91,7 @@ function Cadastro() {
           </p>
         </div>
       </div>
-      <button id="botao" type="submit">
+      <button className={styles.botao} type="submit">
         Cadastrar
       </button>
       <div className={`message ${message.type}`}>{message.text}</div>
