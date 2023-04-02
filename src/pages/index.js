@@ -91,15 +91,13 @@ return (
         </div>
       </div>
       <div className={styles.container2}>
-        <div className={styles.containerLogo}>
-          <Image
-            className={styles.imgLogo}
-            src="/UFRPE.png"
-            alt="UFRPE Logo"
-            fill
-            priority
-          />
-        </div>
+        <Image
+          className={styles.imgLogo}
+          src="/UFRPE.png"
+          alt="UFRPE Logo"
+          fill
+          priority
+        />
       </div>
     </div>
   </>

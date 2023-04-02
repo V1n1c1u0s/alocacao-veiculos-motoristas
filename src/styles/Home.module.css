@@ -4,6 +4,7 @@
   font-family: 'Poppins';
   font-style: normal;
   color: #FFFFFF;
+  height: 100vh;
 }
 
 .container1, .container2{
@@ -16,13 +17,13 @@
   background-color: #132451;
 }
 
-.containerLogo{
+.container2{
   position: relative;
   max-width: 479px;
   max-height: 253px;
-  top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  top: 25%;
+	left: 20%;
+	transform: translate(-25%, 25%);
 }
 
 .imgLogo{
