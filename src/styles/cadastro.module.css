@@ -77,6 +77,19 @@ font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
 } 
+.usuario{
+    width: 440px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #697698;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    outline: 0;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .botao{
     width: 165px;
     height: 34px;
@@ -112,6 +125,10 @@ font-family: Arial, Helvetica, sans-serif;
     color: #ACBFF0;
     display: block;
 }
+.usuario::placeholder{
+    color: #ACBFF0;
+    display: block;
+}
 .h1{
 color: #FFFFFF;
 width: 587px;
@@ -128,10 +145,10 @@ font-size: 24px;
     text-align: center;
   }
   
-  .success {
+  .message.success {
     color: rgb(0, 168, 0);
   }
   
-  .error {
+  .message.error {
     color: red;
   }

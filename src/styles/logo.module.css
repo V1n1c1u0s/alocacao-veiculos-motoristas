@@ -22,3 +22,11 @@ line-height: 72px;
     position: absolute;
     top: 0;
 }
+.containerlogo{
+    position: relative;
+    max-width: 129px;
+    max-height: 83px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

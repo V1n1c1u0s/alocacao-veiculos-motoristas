@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import axios from 'axios';
+import axios from 'axios';
 import styles from '../styles/cadastro.module.css';
 
 function Cadastro() {
@@ -9,11 +9,12 @@ function Cadastro() {
   const [cpf, setCpf] = useState('');
   const [senha, setSenha] = useState('');
   const [message, setMessage] = useState({ text: '', type: '' });
-/*
-  const handleSubmit = (event) => {
+  const [usuario, setUsuario] = useState('');
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-/*
-    const data = { nome, email, contato, cpf, senha };
+
+    const data = { nome, email, contato, cpf, senha, usuario };
     axios.post('http://localhost:3001/usuarios', data)
       .then(response => {
       setMessage({ text: 'Usuário cadastrado com sucesso', type: 'success' });
@@ -22,10 +23,11 @@ function Cadastro() {
       setContato('');
       setCpf('');
       setSenha('');
+      setUsuario('');
     })
     .catch(error => setMessage({ text: 'Erro ao cadastrar usuário', type: 'error' }));
   };
-  */
+  
   return (
     <form className={styles.formulario}>
       <p className={styles.h1}>Realize o cadastro de um novo usuário.</p>
@@ -80,6 +82,22 @@ function Cadastro() {
         </div>
         <div>
           <p>
+          <select
+  className={styles.usuario}
+  value={usuario}
+  onChange={(event) => setUsuario(event.target.value)}
+  required
+>
+<option value="" disabled hidden>
+    Selecione um tipo de usuário
+  </option>
+  <option value="professor">Professor</option>
+  <option value="motorista">Motorista</option>
+</select>
+          </p>
+        </div>
+        <div>
+          <p>
             <input
               className={styles.senha}
               type="password"
@@ -91,10 +109,10 @@ function Cadastro() {
           </p>
         </div>
       </div>
-      <button className={styles.botao} type="submit">
+      <button className={styles.botao} type="submit" onClick={handleSubmit}>
         Cadastrar
       </button>
-      <div className={`message ${message.type}`}>{message.text}</div>
+      <div className={`message ${message.type} ${styles.message}`}>{message.text}</div>
     </form>
   );
 }

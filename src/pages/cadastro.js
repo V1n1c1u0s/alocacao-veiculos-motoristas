@@ -8,7 +8,6 @@ import styles from '../styles/pagcadastro.module.css';
       <Cadastro/>
       </div>
       <div className={styles.ColunaDireita}>
-      
       <Imagem/>
       </div>
     </div>
