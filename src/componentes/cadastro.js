@@ -112,7 +112,9 @@ function Cadastro() {
       <button className={styles.botao} type="submit" onClick={handleSubmit}>
         Cadastrar
       </button>
-      <div className={`message ${message.type} ${styles.message}`}>{message.text}</div>
+      <div className={`${styles.message} ${message.type === 'success' ? styles.success : styles.error}`}>
+  {message.text}
+</div>
     </form>
   );
 }
