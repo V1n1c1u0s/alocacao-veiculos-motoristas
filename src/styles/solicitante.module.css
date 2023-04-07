@@ -20,19 +20,20 @@
   margin: auto 0 ;
   border: none;
   list-style: none;
-  width: 130px;
-  height: 45px;
+  width: 160px;
+  height: 48px;
   border-radius: 1em;
 }
 
 .lnk{
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .span{
   position: relative;
-  top: 10px;
+  top: 12px;
+  left: 4px;
 }
 
 .logo{
@@ -42,10 +43,10 @@
 
 .imgLogo{
   position: relative;
-  margin-top: 15px;
+  margin-top: 5px;
   max-width: 180px;
-  max-height: 85px;
-  margin-left: 55px;
+  max-height: 100px;
+  margin-left: 165px;
 }
 
 .navlist{
