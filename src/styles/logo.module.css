@@ -20,13 +20,20 @@ line-height: 72px;
 }
 .logo{
     position: absolute;
-    top: 0;
+    top: 10px;
+    left: 10px;
+   
 }
-.containerlogo{
-    position: relative;
-    max-width: 129px;
-    max-height: 83px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.linksair{
+    position: fixed;
+    bottom: 0;
+    margin: 20px;
+    color: #132451;
+    font-size: 16px;
+    text-decoration: none;
+    align-items: center;
+
+}
+.linksair:hover{
+    text-decoration: underline;
 }

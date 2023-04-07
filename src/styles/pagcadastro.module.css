@@ -1,32 +1,33 @@
 
-  .App{
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns: 1fr 1fr;
-  
+.App{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+
+  .ColunaDireita{
+ 
+  height: 100vh;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #132451;
+    background-color: white;
+    border-radius: 10px;
   }
-  
-  
-    .ColunaEsquerda{
+  .ColunaEsquerda{
+    position: relative;
     height: 100vh;
     font-size: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color:  #132451;
+    color: white;
+    background-color:  #132451;
     border-radius: 10px;
     }
-    .ColunaDireita{
-      height: 100vh;
-      font-size: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      background-color: #132451;
-      color: white;
-      border-radius: 10px;
-      }
-  
