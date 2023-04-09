@@ -2,8 +2,7 @@ import Head from 'next/head';
 import Header from '@/componentes/Header/Header';
 import NavBar from '@/componentes/Header/NavBar';
 import Item from '@/componentes/Header/Item';
-import Agendamento from '@/componentes/Forms/Agendamento';
-import styles from '@/styles/Pages/solicitante.module.css';
+import styles from '@/styles/Pages/motorista.module.css';
 
 export default function Solicitante(){
   return(
@@ -14,12 +13,10 @@ export default function Solicitante(){
       </Head>
       <Header>
         <NavBar>
-          <Item href="#" text="Agendamento"/>
-          <Item href="/solicitacoes" text="Solicitações"/>
+          <Item href="#" text="Minhas Rotas"/>
         </NavBar>
       </Header>
-      <div className={styles.containerr}>
-        <Agendamento />
+      <div className={styles.container}>
       </div>
     </>
   );
