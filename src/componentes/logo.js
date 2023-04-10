@@ -22,7 +22,7 @@ function Imagem(){
             <p className={styles.paragrafo}>Cadastro para locação de veículo da universidade.</p>
         </div>
         </div>
-        <Link className={styles.linksair} href={"/"}>Voltar</Link>
+        <Link className={styles.linksair} href={"/admin"}>Voltar</Link>
         </>
        )  
    }
