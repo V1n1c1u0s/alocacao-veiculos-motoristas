@@ -115,7 +115,7 @@
 
 .button button{
   width: 200px;
-  height: 60px;
+  height: 30px;
   background: #3D5B95;
   border-radius: 16px;
   border: none;
@@ -124,5 +124,5 @@
 .button span {
   font-weight: 500;
   font-size: 20px;
-  height: 50px;
+  height: 20px;
 }
