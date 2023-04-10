@@ -9,7 +9,7 @@ export default function NavBar({children}){
           {children}
         </ul>
       </nav>
-      <Link className={styles.lnk} href="/logout"><button>Logout</button></Link>
+      <Link className={styles.lnk} href="/"><button>Logout</button></Link>
     </>
   )
 }
