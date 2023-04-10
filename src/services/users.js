@@ -2,10 +2,11 @@ import jwt from "jsonwebtoken"
 import mysql from 'mysql2/promise'
 
 const SECRET = process.env.JWT_SECRET
-
-/*let users = [
-  {email:"vinicius@gmail.com", password:"12345c"}
-]*/
+const MYSQL_HOST = process.env.MYSQL_HOST
+const MYSQL_USER = process.env.MYSQL_USER
+const MYSQL_PASSWORD = process.env.MYSQL_PASSWORD
+const MYSQL_PORT = process.env.MYSQL_PORT
+const MYSQL_DATABASE = process.env.MYSQL_DATABASE
 
 function createToken(user){
   console.log(SECRET)
@@ -27,24 +28,20 @@ export function verificarToken(token){
   return readToken(token)
 }
 
-export async function login(body, res){
+export async function login(body){
   const db = await mysql.createConnection({
-    host: 'localhost',
-    port: '3306',
-    user: 'root',
-    password: '1234',
-    database: 'ufrpe',
+    host: MYSQL_HOST,
+    port: MYSQL_PORT,
+    user: MYSQL_USER,
+    password: MYSQL_PASSWORD,
+    database: MYSQL_DATABASE,
   });
   const req = JSON.parse(body);
   const query = `SELECT Email FROM usuarios where Email='${req.email}' AND senha='${req.password}'`;
   const values = [];
   const [data] = await db.execute(query, values);
   db.end();
-  console.log(data[0])
-  if(data.length === 1){
-    const token = createToken(data[0])
-    console.log(token)
-    return token
-  } else throw new Error ('Usuário e/ou Senha Inválidos');
-
+  if(data.length === 0) throw new Error('Usuário Inválido')
+  const token = createToken(data[0])
+  return token
 }

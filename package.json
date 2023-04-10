@@ -22,6 +22,7 @@
     "fetch": "^1.1.0",
     "jsonwebtoken": "^9.0.0",
     "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
     "next": "13.2.4",
     "next-connect": "^0.13.0",
     "next.js": "^1.0.3",
