@@ -21,12 +21,26 @@ const transporter = nodemailer.createTransport({
 
 export async function sendMail(req){
   try{
-    const con = JSON.parse(req)
+    const info = JSON.parse(req)
     await transporter.sendMail({
-      text: `DATA: ${con.Date}`,
-      subject: 'AGENDAMENTO: ',
+      text: `Pedido de Agendamento para o dia ${info.Date}`,
+      subject: 'professorwaldemar@.com | AGENDAMENTO: ',
       from: ` ${USERNAME} < ${USER} >`,
-      to: USER
+      to: USER,
+      html: `
+        <h1> Professor Waldemar fez um novo pedido de agendamento!</h1><br>
+        <strong>
+          DATA: ${info.Date}<br>
+          Horário de Ida: ${info.HorarioIda}<br>
+          Horário de Volta: ${info.HorarioVolta}<br>
+          CEP: ${info.CEP}<br>
+          Cidade: ${info.cidade}<br>
+          Bairro: ${info.bairro}<br>
+          Endereço: ${info.endereco}<br>
+          N° do Estabelecimento: ${info.nDoLocal}<br>
+          Quantidade de Pessoas: ${info.quantidadePessoas}
+        </strong>
+      `
     })
 
   }catch(e){throw new Error(e.message)}

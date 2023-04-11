@@ -1,4 +1,4 @@
-import { sendMail } from "@/services/email"
+import { sendMail } from "@/services/mail"
 
 export default async function handler(req, res){
   try{
