@@ -32,9 +32,9 @@ export default function Home() {
       const json = await response.json()
       console.log(json)
       if(response.status == 400) throw new Error(json)
-  
+
       setCookie('authorization', json)
-  
+
       const token = JSON.parse(json)
       console.log(token.usuario)
       switch(token.usuario) {
@@ -54,7 +54,7 @@ export default function Home() {
       setError(err.message)
     }
   }
-  
+
 return (
   <>
     <Head>
@@ -101,6 +101,7 @@ return (
             <div className={styles.button}>
               <button type="submit"><span>Entrar</span></button>
             </div>
+            {error && <div className={styles.error}>Usuário e/ou Senha Inválidos</div>}
           </form>
         </div>
       </div>
