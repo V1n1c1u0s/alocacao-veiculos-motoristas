@@ -25,22 +25,36 @@ export default function Home() {
   const handleForm = async (event) => {
     try{
       event.preventDefault()
-      //console.log(formData)
       const response = await fetch(`/api/auth/user/login`, {
         method: 'POST',
         body: JSON.stringify(formData)
       })
       const json = await response.json()
-
+      console.log(json)
       if(response.status == 400) throw new Error(json)
-
+  
       setCookie('authorization', json)
-      router.push('/dashboard')
+  
+      const token = JSON.parse(json)
+      console.log(token.usuario)
+      switch(token.usuario) {
+        case 'motorista':
+          router.push('/motorista')
+          break;
+        case 'professor':
+          router.push('/solicitante')
+          break;
+        case 'admin':
+          router.push('/admin')
+          break;
+        default:
+          router.push('/')
+      }
     } catch(err) {
       setError(err.message)
     }
   }
-
+  
 return (
   <>
     <Head>
