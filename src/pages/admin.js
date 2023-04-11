@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Header from '@/componentes/Header/Header';
 import NavBar from '@/componentes/Header/NavBar';
 import Item from '@/componentes/Header/Item';
-import styles from '@/styles/Pages/Admin.module.css';
+import styles from '@/styles/Pages/default.module.css';
+
 export default function Admin() {
     return(  
        <>
@@ -12,9 +13,9 @@ export default function Admin() {
        </Head>
        <Header>
         <NavBar>
-          <Item href="#" text="Agendamento"/>
-          <Item href="/solicitacoes" text="Solicitações"/>
+          <Item href="/area-agendamento" text="Agendar"/>
           <Item href="/cadastro" text="Cadastrar"/>
+          <Item href="/solicitacoes" text="Solicitações"/>
         </NavBar>
       </Header>
       <div className={styles.container}>

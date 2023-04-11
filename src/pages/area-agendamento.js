@@ -5,17 +5,16 @@ import Item from '@/componentes/Header/Item';
 import Agendamento from '@/componentes/Forms/Agendamento';
 import styles from '@/styles/Pages/default.module.css';
 
-export default function Solicitante(){
+export default function AreaAgendamento(){
   return(
     <>
       <Head>
-        <title>Solicitante</title>
+        <title>Área de Agendamento</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header>
         <NavBar>
           <Item href="/agendamentos" text="Agendamentos"/>
-          <Item href="/solicitacoes" text="Solicitações"/>          
         </NavBar>
       </Header>
       <div className={styles.container}>
