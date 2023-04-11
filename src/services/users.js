@@ -9,8 +9,8 @@ const MYSQL_PORT = process.env.MYSQL_PORT
 const MYSQL_DATABASE = process.env.MYSQL_DATABASE
 
 function createToken(user){
-  console.log(SECRET)
-  console.log(user.Email)
+ // console.log(SECRET)
+ // console.log(user.Email)
   return jwt.sign({
     email: user.Email,
     usuario: user.usuario
@@ -38,11 +38,12 @@ export async function login(body){
     database: MYSQL_DATABASE,
   });
   const req = JSON.parse(body);
-  const query = `SELECT Email,usuario FROM usuarios where Email='${req.email}' AND senha='${req.senha}'`;
+  const query = `SELECT Email,usuario FROM usuarios where Email='${req.email}' AND senha='${req.password}'`;
   const values = [];
   const [data] = await db.execute(query, values);
   db.end();
   if(data.length === 0) throw new Error('Usuário Inválido')
   const token = createToken(data[0])
-  return token
+
+  return {token, usuario: data[0].usuario}
 }

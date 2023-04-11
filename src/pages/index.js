@@ -30,12 +30,13 @@ export default function Home() {
         body: JSON.stringify(formData)
       })
       const json = await response.json()
-  
+      console.log(json)
       if(response.status == 400) throw new Error(json)
   
       setCookie('authorization', json)
   
       const token = JSON.parse(json)
+      console.log(token.usuario)
       switch(token.usuario) {
         case 'motorista':
           router.push('/motorista')
