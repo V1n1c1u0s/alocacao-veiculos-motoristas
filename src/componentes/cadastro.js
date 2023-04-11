@@ -29,7 +29,7 @@ function Cadastro() {
   };
   
   return (
-    <form className={styles.formulario}>
+    <form className={styles.formulario} onSubmit={handleSubmit}>
       <p className={styles.h1}>Realize o cadastro de um novo usuário.</p>
       <div className={styles.campos}>
         <div>
@@ -109,7 +109,7 @@ function Cadastro() {
           </p>
         </div>
       </div>
-      <button className={styles.botao} type="submit" onClick={handleSubmit}>
+      <button className={styles.botao} type="submit" >
         Cadastrar
       </button>
       <div className={`${styles.message} ${message.type === 'success' ? styles.success : styles.error}`}>
