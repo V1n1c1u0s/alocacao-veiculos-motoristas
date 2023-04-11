@@ -25,19 +25,17 @@ export default function Home() {
   const handleForm = async (event) => {
     try{
       event.preventDefault()
-      const response = await fetch(`/api/auth/user/login`, {
+      const response = await fetch('/api/auth/user/login', {
         method: 'POST',
         body: JSON.stringify(formData)
       })
       const json = await response.json()
-      console.log(json)
+      //console.log(json)
       if(response.status == 400) throw new Error(json)
 
-      setCookie('authorization', json)
+      setCookie('authorization', json.token)
 
-      const token = JSON.parse(json)
-      console.log(token.usuario)
-      switch(token.usuario) {
+      switch(json.usuario.usuario) {
         case 'motorista':
           router.push('/motorista')
           break;

@@ -29,6 +29,7 @@ export function verificarToken(token){
   return readToken(token)
 }
 
+
 export async function login(body){
   const db = await mysql.createConnection({
     host: MYSQL_HOST,
@@ -38,12 +39,13 @@ export async function login(body){
     database: MYSQL_DATABASE,
   });
   const req = JSON.parse(body);
-  const query = `SELECT Email,usuario FROM usuarios where Email='${req.email}' AND senha='${req.password}'`;
+  //const query = SELECT Email,usuario FROM usuarios where Email='${req.email}' AND senha='${req.password}';
+  const query = `SELECT email, usuario FROM usuarios where Email='${req.email}' AND senha='${req.password}'`;
   const values = [];
   const [data] = await db.execute(query, values);
   db.end();
   if(data.length === 0) throw new Error('Usuário Inválido')
   const token = createToken(data[0])
 
-  return {token, usuario: data[0].usuario}
+  return {token, usuario: data[0]}
 }
