@@ -4,6 +4,9 @@ import styles from '@/styles/Pages/Home.module.css'
 import { useState } from 'react'
 import { setCookie } from 'cookies-next'
 import { useRouter } from 'next/router'
+import { getCookie } from 'cookies-next'
+import jwt from 'jsonwebtoken'
+import { verificarToken } from '@/services/users'
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -115,4 +118,24 @@ return (
     </div>
   </>
 )
+}
+
+export const getServerSideProps = async ({req, res}) => {
+  try{
+    const token = getCookie('authorization', {req, res})
+    if(!token) throw new Error('Token Inválido!')
+    verificarToken(token)
+    const decode = jwt.decode(token)
+    return{
+      redirect: {
+        permanent: false,
+        destination: `/${decode.usuario}`
+      },
+      props: {}
+    }
+  }catch (err){
+    return{
+      props: {}
+    }
+  }
 }
