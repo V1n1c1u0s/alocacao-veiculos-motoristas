@@ -36,7 +36,7 @@ export default function Home() {
       //console.log(json)
       if(response.status == 400) throw new Error(json)
 
-      setCookie('authorization', json.token)
+      setCookie('authorization', json.token, {maxAge: 60*15})
 
       switch(json.usuario.usuario) {
         case 'motorista':

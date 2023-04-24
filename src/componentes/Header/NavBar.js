@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from '@/styles/Header/NavBar.module.css'
+import { LogOut } from '@/pages/api/logout/logout'
 
 export default function NavBar({children}){
   return(
@@ -9,7 +10,7 @@ export default function NavBar({children}){
           {children}
         </ul>
       </nav>
-      <Link className={styles.lnk} href="/"><button>Logout</button></Link>
+      <Link className={styles.lnk} href="/"><button onClick={LogOut}>Logout</button></Link>
     </>
   )
 }
